@@ -138,7 +138,7 @@ footer a.navlink {
     }
     nav ul {
         float: right;
-        margin-right: 2em;
+        margin-right: 3em;
         }
     nav li {
         display: inline;
@@ -146,12 +146,7 @@ footer a.navlink {
         }
     nav a.navlink {
         font-size: 13px !important;
-        }
-    nav .title {
-        float: left;
-        margin-left: 1em;
-        padding: 1em;
-        font-size: 13px !important;
+        padding: 0em;
         }
     .anchor{
         display: block;
@@ -168,12 +163,12 @@ footer a.navlink {
         align-content: center !important;
         text-align: center !important;
     }
-    nav .title {
-        font-size: 13px !important;
-        }
     nav ul {
         margin-right: 3em;
         }
+    nav li {
+        padding: 0.5em;
+        }    
     nav a.navlink {
         font-size: 13px !important;
         }
