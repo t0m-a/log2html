@@ -91,35 +91,34 @@ echo '  <meta charset="utf-8">
 echo "  <title>Stats and Logs at $hostname</title>" >> $htmlFile;
 echo "      </head>
         <body>" >> $htmlFile;
-echo '<nav><span class="title"><a class="navlink" href="#main">System Stats and Logs Information</a></span>
-        <ul>
-        <li><a class="navlink" href="#host">Host</a></li>
-        <li><a class="navlink" href="#network">Network</a></li>
-        <li><a class="navlink" href="#resources">Resources</a></li>
-        <li><a class="navlink" href="#auth_logs">Auth Logs</a></li>
-        <li><a class="navlink" href="#http_logs">HTTP Logs</a></li>
+echo '  <nav><ul><li><a class="navlink" id="aws" href="#main">System Stats and Logs Information</a></li>
+        <li><a class="navlink" id="aws" href="#host">Host</a></li>
+        <li><a class="navlink" id="aws" href="#network">Network</a></li>
+        <li><a class="navlink" id="aws" href="#resources">Resources</a></li>
+        <li><a class="navlink" id="aws" href="#auth_logs">Auth Logs</a></li>
+        <li><a class="navlink" id="aws" href="#http_logs">HTTP Logs</a></li>
         </ul></nav>' >> $htmlFile;
 echo "            <div class="main" id="main">" >> $htmlFile;
 echo "<span class="anchor" id="host"></span><a name="host">&nbsp</a><h1 class="host">Instance Host Information</h1>" >> $htmlFile;
-echo "<p><b>Hostname</b> <span id="highlight">$hostname</span> <b>has id</b> <span id="highlight">$instanceId</span> and is of <b>type</b> <span id="highlight">$instanceType</span> in <b>region</b> <span id="highlight">$availabilityZone</span></p>" >> $htmlFile;
-echo "<p><b><span id="highlight">Private</span> IPV4 DNS hostname is</b>: $privateDns. And <b><span id="highlight">Public</span> IPV4 DNS hostname is</b>: $publicDns</p>" >> $htmlFile;
-echo "<p><b>Instance signature is</b>: $instanceSignature</p>" >> $htmlFile;
-echo "<p><b>Date</b>: $date</p>" >> $htmlFile;
-echo "<p><b>Uptime</b>: $uptime</p>" >> $htmlFile;
-echo "<p><b>User running script is</b>: $youare $id</p>" >> $htmlFile;
-echo "<p><b>At</b>: $hostinfo</p>" >> $htmlFile;
-echo "<p><b>AWS domain of instance is</b>: $awsDomain. <b>AWS domain partition is:</b> $awsDomainPartition</p>" >> $htmlFile;
+echo "<p><b>Hostname</b> <span class="awsresults">$hostname</span> <b>has id</b> <span class="awsresults">$instanceId</span> and is of <b>type</b> <span class="awsresults">$instanceType</span> in <b>region</b> <span class="awsresults">$availabilityZone</span></p>" >> $htmlFile;
+echo "<p><b><span class="awsresults">Private</span> IPV4 DNS hostname is</b>: <span class="awsresults">$privateDns</span>. And <b><span class="awsresults">Public</span> IPV4 DNS hostname is</b>: <span class="awsresults">$publicDns</span></p>" >> $htmlFile;
+echo "<p><b>Instance signature is</b>: <span class="awsresults">$instanceSignature</span></p>" >> $htmlFile;
+echo "<p><b>Date</b>: <span class="awsresults">$date</span></p>" >> $htmlFile;
+echo "<p><b>Uptime</b>: <span class="awsresults">$uptime</span></p>" >> $htmlFile;
+echo "<p><b>User running script is</b>: <span class="awsresults">$youare $id</span></p>" >> $htmlFile;
+echo "<p><b>At</b>: <span class="awsresults">$hostinfo</span></p>" >> $htmlFile;
+echo "<p><b>AWS domain of instance is</b>: <span class="awsresults">$awsDomain</span>. <b>AWS domain partition is:</b> <span class="awsresults">$awsDomainPartition</span></p>" >> $htmlFile;
 echo "<p><b>OS Information</b>:<br><pre>$osinfo</pre></p>" >> $htmlFile
 echo "<p><b>AWS instance document (full)</b>:<br><pre>$instanceFullDocument</pre></p>" >> $htmlFile
 echo "<span class="anchor" id="network"></span><a name="network">&nbsp</a><h1 class="network">Instance Network Information</h1>" >> $htmlFile;
-echo "<p><b>Private IPv4 </b>$localIpv4<b> has netmask </b>$netmask<b> and gateway </b>$gateway</p>" >> $htmlFile;
-echo "<p><b>Wan address is</b>: $ip - <b>ETH0 address is</b>: $ipcfg and <b>has MAC</b>: $hMac</p>" >> $htmlFile;
+echo "<p><b>Private IPv4 </b><span class="awsresults">$localIpv4</span><b> has netmask </b><span class="awsresults">$netmask</span><b> and gateway </b><span class="awsresults">$gateway</span></p>" >> $htmlFile;
+echo "<p><b>Wan address is</b>: $ip - <b>ETH0 address is</b>: <span class="awsresults">$ipcfg</span> and <b>has MAC</b>: <span class="awsresults">$hMac</span></p>" >> $htmlFile;
 echo "<p><b>DNS IP </b>$dns</p>" >> $htmlFile;
-echo "<p><b>AWS Security Groups are</b>: $securityGroups</p>" >> $htmlFile;
+echo "<p><b>AWS Security Groups are</b>: <span class="awsresults">$securityGroups</span></p>" >> $htmlFile;
 echo "<p><b>Publich SSH Key recorded</b>:<br><pre>$sshPubKey</pre></p>" >> $htmlFile;
 echo "<span class="anchor" id="resources"></span><a name="resources">&nbsp</a><h1 class="resources">Instance Resources & Users Information</h1>" >> $htmlFile;
 echo "<p><b>Connected users</b>:<br><pre>$who</pre></p>" >> $htmlFile;
-echo "<p><b>AMI volume is</b>: $volumeAmi. <b>System ROOT volume is</b>: $volumeRoot</p>" >> $htmlFile;
+echo "<p><b>AMI volume is</b>: <span class="awsresults">$volumeAmi</span>. <b>System ROOT volume is</b>: <span class="awsresults">$volumeRoot</span></p>" >> $htmlFile;
 echo "<p><b>Volumes usage</b>:<br><pre>$diskfree</pre></p>" >> $htmlFile;
 echo "<p><b>Memory usage</b>:<br><pre>$memfree</pre></p>" >> $htmlFile;
 echo "<span class="anchor" id="auth_logs"></span><a name="auth_logs">&nbsp</a><h1 class="auth_logs">Instance Authentification & Access Information</h1>" >> $htmlFile;

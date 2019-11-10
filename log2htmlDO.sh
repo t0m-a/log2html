@@ -81,8 +81,8 @@ echo '  <meta charset="utf-8">
 echo "  <title>Stats and Logs at $hostname</title>" >> $htmlFile;
 echo "      </head>
         <body>" >> $htmlFile;
-echo '<nav><span class="title"><a class="navlink" href="#main">System Stats and Logs Information</a></span>
-        <ul>
+echo '<nav>
+        <ul><li><a class="navlink" href="#main">System Stats and Logs Information:</a></li>
         <li><a class="navlink" href="#host">Host</a></li>
         <li><a class="navlink" href="#network">Network</a></li>
         <li><a class="navlink" href="#resources">Resources</a></li>
@@ -91,17 +91,17 @@ echo '<nav><span class="title"><a class="navlink" href="#main">System Stats and 
         </ul></nav>' >> $htmlFile;
 echo "            <div class="main" id="main">" >> $htmlFile;
 echo "<span class="anchor" id="host"></span><a name="host">&nbsp</a><h1 class="host">Instance Host Information</h1>" >> $htmlFile;
-echo "<p><b>Hostname</b> $hostname <b>has id</b> $instanceId</p>" >> $htmlFile;
-echo "<p><b>Date</b>: $date</p>" >> $htmlFile;
-echo "<p><b>Uptime</b>: $uptime</p>" >> $htmlFile;
-echo "<p><b>User running script is</b>: $youare $id</p>" >> $htmlFile;
-echo "<p><b>At</b>: $hostinfo</p>" >> $htmlFile;
+echo "<p><b>Hostname</b> <span class="doresults">$hostname</span> <b>has id</b> <span class="doresults">$instanceId</span></p>" >> $htmlFile;
+echo "<p><b>Date</b>: <span class="doresults">$date</span></p>" >> $htmlFile;
+echo "<p><b>Uptime</b>: <span class="doresults">$uptime</span></p>" >> $htmlFile;
+echo "<p><b>User running script is</b>: <span class="doresults">$youare</span> <span class="doresults">$id</span></p>" >> $htmlFile;
+echo "<p><b>At</b>: <span class="doresults">$hostinfo</span></p>" >> $htmlFile;
 echo "<p><b>OS Information</b>:<br><pre>$osinfo</pre></p>" >> $htmlFile
 echo "<span class="anchor" id="network"></span><a name="network">&nbsp</a><h1 class="network">Instance Network Information</h1>" >> $htmlFile;
-echo "<p><b>Private IPv4 </b>$lanIp<b> has netmask </b>$netmask<b> and gateway </b>$gateway</p>" >> $htmlFile;
-echo "<p><b>Is floating IP active?</b>:$activeFloating<b> and has address </b>$activeFloatingIp</p>" >> $htmlFile;
-echo "<p><b>Wan </b>$ip - <b>eth0 </b>$ipcfg</p>" >> $htmlFile;
-echo "<p><b>DNS IP </b>$dns</p>" >> $htmlFile;
+echo "<p><b>Private IPv4 </b><span class="doresults">$lanIp</span><b> has netmask </b><span class="doresults">$netmask</span><b> and gateway </b><span class="doresults">$gateway</span></p>" >> $htmlFile;
+echo "<p><b>Is floating IP active?</b>: <span class="doresults">$activeFloating</span><b> and has address </b><span class="doresults">$activeFloatingIp</span></p>" >> $htmlFile;
+echo "<p><b>Wan </b>$ip - <b>eth0 </b><span class="doresults">$ipcfg</span></p>" >> $htmlFile;
+echo "<p><b>DNS IP </b><span class="doresults">$dns</span></p>" >> $htmlFile;
 echo "<span class="anchor" id="resources"></span><a name="resources">&nbsp</a><h1 class="resources">Instance Resources & Users Information</h1>" >> $htmlFile;
 echo "<p><b>Connected users</b>:<br><pre>$who</pre></p>" >> $htmlFile;
 echo "<p><b>Volumes usage</b>:<br><pre>$diskfree</pre></p>" >> $htmlFile;

@@ -12,8 +12,8 @@ nav {
     overflow: hidden;
     top: 0;
     left: 0;
-    padding-top: 2.3em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     width: 100%;
     height: 50px;
     background-color: rgb(250,250,250,0.7);
@@ -22,22 +22,25 @@ nav {
     box-shadow: 1px 0px 1px rgb(117, 117, 117);
     }
 .navlink:hover {
-    text-decoration: underline !important;
+    text-decoration: none !important;
+    color: white;
+    background-image: linear-gradient(-90deg, #70c1d8 0%,#1badd6 100%);
+}
+.navlink#aws:hover {
+    text-decoration: none !important;
+    color: white;
+    background-image: linear-gradient(-90deg, #d8ce70 0%,#d6a41b 100%);
+}
+.navlink#vmware:hover {
+    text-decoration: none !important;
+    color: white;
+    background-image: linear-gradient(-90deg, #70d879 0%,#66d61b 100%);
 }
 nav a.navlink {
     text-decoration: none !important;
     color: #202020;
-    font-size: 14px !important;
-    }
-nav::after {
-    clear: both;
-    content: '';
-    }
-nav .title {
-    float: left;
-    margin-left: 3em;
-    padding: 1em;
-    font-size: 14px !important;
+    font-size: 18px !important;
+    padding: 2em;
     }
 nav ul {
     float: right;
@@ -45,7 +48,6 @@ nav ul {
     }
 nav li {
     display: inline;
-    padding: 1em;
     }
 .main {
     display: flex;
@@ -53,14 +55,26 @@ nav li {
     width: 90%;
     margin: 2% 0% 0% 3%;
     }
-#highlight {
-    background-color: white !important;
-    }
 .anchor{
     display: block;
     padding-top: 80px;
     visibility: hidden;
     }
+.doresults {
+    color: white;
+    background-image: linear-gradient(-90deg, #70c1d8 0%,#1badd6 100%);
+    word-spacing: 5px;
+}
+.awsresults {
+    color: white;
+    background-image: linear-gradient(-90deg, #d8ce70 0%,#d6a41b 100%);
+    word-spacing: 5px;
+}
+.vmwareresults {
+    color: white;
+    background-image: linear-gradient(-90deg, #70d879 0%,#66d61b 100%);
+    word-spacing: 5px;
+}
 h1 {
     font-family: 'Roboto', sans-serif !important;
     font-weight: 300 !important;
@@ -113,7 +127,8 @@ footer ul {
 footer a.navlink {
     text-decoration: none;
     color: #202020 !important;
-    font-size: 14px !important;
+    font-size: 18px !important;
+    padding: 2em;
 }
 /* Mobile */
 @media (max-width: 849px) {

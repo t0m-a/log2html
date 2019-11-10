@@ -71,26 +71,25 @@ echo '  <meta charset="utf-8">
 echo "  <title>Stats and Logs at $hostname</title>" >> $htmlFile;
 echo "      </head>
         <body>" >> $htmlFile;
-echo '<nav><span class="title"><a class="navlink" href="#main">System Stats and Logs Information</a></span>
-        <ul>
-        <li><a class="navlink" href="#host">Host</a></li>
-        <li><a class="navlink" href="#network">Network</a></li>
-        <li><a class="navlink" href="#resources">Resources</a></li>
-        <li><a class="navlink" href="#auth_logs">Auth Logs</a></li>
-        <li><a class="navlink" href="#http_logs">HTTP Logs</a></li>
+echo '  <nav><ul><li><a class="navlink" id="vmware" href="#main">System Stats and Logs Information</a></li>
+        <li><a class="navlink" id="vmware" href="#host">Host</a></li>
+        <li><a class="navlink" id="vmware" href="#network">Network</a></li>
+        <li><a class="navlink" id="vmware" href="#resources">Resources</a></li>
+        <li><a class="navlink" id="vmware" href="#auth_logs">Auth Logs</a></li>
+        <li><a class="navlink" id="vmware" href="#http_logs">HTTP Logs</a></li>
         </ul></nav>' >> $htmlFile;
 echo "            <div class="main" id="main">" >> $htmlFile;
 echo "<span class="anchor" id="host"></span><a name="host">&nbsp</a><h1 class="host">Instance Host Information</h1>" >> $htmlFile;
-echo "<p><b>Hostname</b> $hostname <b>has id</b> $instanceId</p>" >> $htmlFile;
-echo "<p><b>Date</b>: $date</p>" >> $htmlFile;
-echo "<p><b>Uptime</b>: $uptime</p>" >> $htmlFile;
-echo "<p><b>User running script is</b>: $youare $id</p>" >> $htmlFile;
-echo "<p><b>At</b>: $hostinfo</p>" >> $htmlFile;
+echo "<p><b>Hostname</b> <span class="vmwareresults">$hostname</span> <b>has id</b> <span class="vmwareresults">$instanceId</span></p>" >> $htmlFile;
+echo "<p><b>Date</b>: <span class="vmwareresults">$date</span></p>" >> $htmlFile;
+echo "<p><b>Uptime</b>: <span class="vmwareresults">$uptime</span></p>" >> $htmlFile;
+echo "<p><b>User running script is</b>: <span class="vmwareresults">$youare $id</span></p>" >> $htmlFile;
+echo "<p><b>At</b>: <span class="vmwareresults">$hostinfo</span></p>" >> $htmlFile;
 echo "<p><b>OS Information</b>:<br><pre>$osinfo</pre></p>" >> $htmlFile
 echo "<span class="anchor" id="network"></span><a name="network">&nbsp</a><h1 class="network">Instance Network Information</h1>" >> $htmlFile;
-echo "<p><b>Private IPv4 </b>$lanIp<b> has netmask </b>$netmask<b> and gateway </b>$gateway</p>" >> $htmlFile;
-echo "<p><b>Wan </b>$ip - <b>eth0 </b>$ipcfg</p>" >> $htmlFile;
-echo "<p><b>DNS IP </b>$dns</p>" >> $htmlFile;
+echo "<p><b>Private IPv4 </b><span class="vmwareresults">$lanIp</span><b> has netmask </b><span class="vmwareresults">$netmask</span><b> and gateway </b><span class="vmwareresults">$gateway</span></p>" >> $htmlFile;
+echo "<p><b>Wan </b>$ip - <b>eth0 </b><span class="vmwareresults">$ipcfg</span></p>" >> $htmlFile;
+echo "<p><b>DNS IP </b><span class="vmwareresults">$dns</span></p>" >> $htmlFile;
 echo "<span class="anchor" id="resources"></span><a name="resources">&nbsp</a><h1 class="resources">Instance Resources & Users Information</h1>" >> $htmlFile;
 echo "<p><b>Connected users</b>:<br><pre>$who</pre></p>" >> $htmlFile;
 echo "<p><b>Volumes usage</b>:<br><pre>$diskfree</pre></p>" >> $htmlFile;
