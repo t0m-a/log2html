@@ -32,6 +32,15 @@ When build the web page will display all the common and useful system informatio
 - system network and cloud infrastructure network information
 - auth and HTTP access log (for Nginx and Apache)
 
+### Updated styles per providers
+
+DigitalOcean, blue:
+![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/do.jpg)
+Amazon Web Service, orange:
+![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/aws.jpg)
+VNware, green:
+![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/vm.jpg)
+
 ### Screenshots
 
 Screenshot examples (partials) for DigitalOcean cloud instance script.
@@ -45,8 +54,5 @@ Resources section:
 Logs sections:
 ![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh4.jpg)
 ![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh5.jpg)
-
-
-
 
 
