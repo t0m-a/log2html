@@ -35,24 +35,24 @@ When build the web page will display all the common and useful system informatio
 ### Updated styles per providers
 
 DigitalOcean, blue:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/do.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/do.jpg)
 Amazon Web Service, orange:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/aws.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/aws.jpg)
 VNware, green:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/vm.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/vm.jpg)
 
 ### Screenshots
 
 Screenshot examples (partials) for DigitalOcean cloud instance script.
 
 Host section:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh1.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/genlogsh1.jpg)
 Network section:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh2.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/genlogsh2.jpg)
 Resources section:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh3.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/genlogsh3.jpg)
 Logs sections:
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh4.jpg)
-![Program generated web page screenshot](https://tsimon-me.s3.amazonaws.com/img/genlogsh5.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/genlogsh4.jpg)
+![Program generated web page screenshot](https://tsimon.me/img/genlogsh5.jpg)
 
 
